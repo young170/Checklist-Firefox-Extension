@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checklist</title>
+    <style>
+      body {
+        min-width: 250px;
+        overflow-x: hidden;
+      }
+
+      .checklist-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+
+      .checklist-item input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      .checklist-item label {
+        flex-grow: 1;
+      }
+
+      .checklist-item button {
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="checklist"></ul>
+    <form id="new-item-form">
+      <input type="text" id="new-item-input" placeholder="New item" autocomplete="off">
+      <button type="submit">Add</button>
+    </form>
+    <script src="popup.js"></script>
+  </body>
+</html>
