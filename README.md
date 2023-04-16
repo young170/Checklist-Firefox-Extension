@@ -6,7 +6,7 @@ It was amazing to see ChatGPT's effectiveness.<br>
 The entire code was 99% written by ChatGPT.<br>
 It seems it is specialized in the Web-App ~~SQL~~ field.
 ___
-## Instrutions
+## Instructions
 1. Clone the repository
 ```
 git clone https://github.com/young170/Checklist-Firefox-Extension.git
