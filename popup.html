@@ -3,36 +3,142 @@
   <head>
     <title>Checklist</title>
     <style>
+      /* Custom fonts */
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+      
+      /* Body styles */
       body {
-        min-width: 250px;
-        overflow-x: hidden;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #F2F2F2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
       }
 
+      /* Container styles */
+      .container {
+        width: 80%;
+        max-width: 500px;
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Header styles */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .header h1 {
+        font-weight: 400;
+        color: #333333;
+        margin: 0;
+      }
+
+      .header button {
+        background-color: #333333;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      /* Form styles */
+      form {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        border: none;
+        border-bottom: 2px solid #333333;
+        font-size: 16px;
+        padding: 10px;
+        margin-right: 10px;
+        width: 100%;
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+      }
+
+      button[type="submit"] {
+        background-color: #333333;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      /* Checklist styles */
       .checklist-item {
         display: flex;
         align-items: center;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
       }
 
       .checklist-item input[type="checkbox"] {
-        margin-right: 5px;
+        margin-right: 10px;
+        cursor: pointer;
       }
 
       .checklist-item label {
         flex-grow: 1;
+        font-size: 16px;
+        color: #333333;
+        cursor: pointer;
       }
 
       .checklist-item button {
-        margin-left: 5px;
+        background-color: #333333;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 10px;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .checklist-item button:hover {
+        opacity: 0.7;
+      }
+
+      .checklist-item button:focus {
+        outline: none;
+      }
+
+      /* Media queries */
+      @media screen and (max-width: 768px) {
+        .container {
+          width: 90%;
+        }
       }
     </style>
   </head>
   <body>
-    <ul id="checklist"></ul>
-    <form id="new-item-form">
-      <input type="text" id="new-item-input" placeholder="New item" autocomplete="off">
-      <button type="submit">Add</button>
-    </form>
-    <script src="popup.js"></script>
-  </body>
-</html>
+    <div class="container">
+        <div class="header">
+            <h1>Checklist</h1>
+            <button id="clear-btn">Clear all</button
+        </div>
+        <form id="new-item-form">
+            <input type="text" id="new-item-input" placeholder="New item" autocomplete="off">
+            <button type="submit">Add</button>
+        </form>
+        <ul id="checklist"></ul>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+    </html>
